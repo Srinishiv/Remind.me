@@ -1,0 +1,49 @@
+            /**** Git Client interaction with Git Hub API*****/
+
+    Task 1 : 
+          End Point URLS : 
+                A)  http://localhost:8080/adduserprofile   - to Store Data into DB (H2)
+                B)  http://localhost:8080/alluserprofile -  to Get all user information from DB
+                c)  http://localhost:8080/alluserprofile/id - to Get one user nformation
+                d)  http://localhost:8080/removespecuser/id - to remove particular user
+                e)  http://localhost:8080/modifyuser/id     -  to Update particular user information 
+
+  
+  For testing ,I have used POSTMAN . To store date ,I have send JSON array through POSTMAN.
+  Two sample data ,which ,I send from Postman : 
+
+     [
+    {  
+    "id": "1",  
+    "firstName": "Supratim",  
+    "surName": "Bhaumik",  
+    "position": "Senior backend software engineer"  ,
+    "githubProfileurl":"https://github.com/Srinishiv"
+    
+},   
+{  
+    "id": "2",  
+    "firstName": "Souvik",  
+    "surName": "Mitra",  
+    "position": "Business analysist"  ,
+    "githubProfileurl":"https://github.com/souvikMitraHda"
+} 
+]
+
+
+
+Task2 : 
+   End Point Url : 
+          a)  http://localhost:8080/users/1/repositories  ---  Give all the public GIT-HUB repository                                                                information for a user which is stored in 
+                                                               the DB
+
+
+Databse :  H2 
+        Access to DB:  http://localhost:8080/h2-console (no password is there . only connect)  
+ Note : I have not stored any physical location file for DB  
+
+Junit Test Case : (Only 2 Test case is present currently)
+       Task 1 TestCase : for Check data into DB -  tesaddUserProfile() Test function
+       Task 2 TestCase : to Check  Result of Git Repository data for user - testGitRepository() Test function
+
+                          /******* Happy Coding ********/
